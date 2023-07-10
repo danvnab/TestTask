@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  TestTask
+
+  Created by Danil Velanskiy on 09.07.2023.
+  
+*/
+
+"categoryTitle" = "Book categories";
+"oldest" = "Oldest published date";
+"newest" = "Newest published date";
+"rank" = "Rank";
+"author" = "Author";
+"publisher" = "Publisher";

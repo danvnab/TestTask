@@ -14,7 +14,7 @@ class BooksScreenViewModel {
     let realmManager: RealmManager = .shared
     var model: [Book] = []
     
-    func fetchData(listName: String, _ completion: @escaping (() -> Void)) {
+    func fetchData(listName: String, _ completion: @escaping ((String?) -> Void)) {
         if ConnectionObserver.instance.isConnectedToInternet {
             async {
                 do {
@@ -32,7 +32,7 @@ class BooksScreenViewModel {
                         var itemToSave = data
                         itemToSave.results.books = self.model
                         try? self.realmManager.save(RealmBookMainModel(results: itemToSave))
-                        completion()
+                        completion(nil)
                     }
                     let objects = realmManager.getAllObjects(ofType: RealmBookMainModel.self)
                     let objectsToDelete = objects?.filter( { $0.results?.listNameEncoded == listName } )
@@ -40,14 +40,19 @@ class BooksScreenViewModel {
                     try objectsToDelete?.forEach( { try self.realmManager.delete($0) } )
                     
                 } catch {
-                    // Handle error
+                    print(error.localizedDescription)
+                    completion(error.localizedDescription)
                 }
             }
         } else {
             let data = realmManager.getAllObjects(ofType: RealmBookMainModel.self)
             let model = data?.first(where: { $0.results?.listNameEncoded == listName } )
             model?.results?.books.forEach( { self.model.append(Book(from: $0)) } )
-            completion()
+            if self.model.isEmpty {
+                completion("No data available")
+            } else {
+                completion(nil)
+            }
         }
     }
     

@@ -41,9 +41,13 @@ final class BooksScreenViewController: UIViewController {
     
     func featchData(listName: String, title: String) {
         navigationItem.title = title
-        viewModel.fetchData(listName: listName) {
+        viewModel.fetchData(listName: listName) { error in
             DispatchQueue.main.async {
-                self.mainView.tableView.reloadData()
+                if let error = error {
+                    self.showAlert(messege: error)
+                } else {
+                    self.mainView.tableView.reloadData()
+                }
             }
         }
     }
@@ -60,6 +64,7 @@ extension BooksScreenViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BooksCell", for: indexPath) as? BooksScreenViewCell else { return UITableViewCell() }
+        cell.selectionStyle = .none
         cell.configure(model: viewModel.model[indexPath.row])
         return cell
     }

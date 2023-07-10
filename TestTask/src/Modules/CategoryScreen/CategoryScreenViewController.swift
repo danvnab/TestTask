@@ -37,9 +37,13 @@ final class CategoryScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Book categories"
-        viewModel.featchModel {
+        viewModel.featchModel { error in
             DispatchQueue.main.async {
-                self.mainView.tableView.reloadData()
+                if let error = error {
+                    self.showAlert(messege: error)
+                } else {
+                    self.mainView.tableView.reloadData()
+                }
             }
         }
     }
@@ -52,6 +56,7 @@ extension CategoryScreenViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as? CategoryScreenViewCell else { return UITableViewCell() }
+        cell.selectionStyle = .none
         cell.configureCell(model: viewModel.model[indexPath.row])
         return cell
     }

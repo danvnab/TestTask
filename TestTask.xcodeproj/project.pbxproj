@@ -24,6 +24,7 @@
 		070E27F92A5BE2E300289414 /* BooksPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E27F82A5BE2E300289414 /* BooksPopUpViewModel.swift */; };
 		070E27FC2A5BFA0800289414 /* WebScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E27FB2A5BFA0800289414 /* WebScreenViewController.swift */; };
 		070E28002A5C081200289414 /* ConnectionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E27FF2A5C081200289414 /* ConnectionObserver.swift */; };
+		070E28022A5CA18800289414 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E28012A5CA18800289414 /* Extension.swift */; };
 		0729EEC72A56971B00F59C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729EEC62A56971B00F59C56 /* AppDelegate.swift */; };
 		0729EEC92A56971B00F59C56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729EEC82A56971B00F59C56 /* SceneDelegate.swift */; };
 		0729EED02A56971C00F59C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0729EECF2A56971C00F59C56 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		070E27F82A5BE2E300289414 /* BooksPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksPopUpViewModel.swift; sourceTree = "<group>"; };
 		070E27FB2A5BFA0800289414 /* WebScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScreenViewController.swift; sourceTree = "<group>"; };
 		070E27FF2A5C081200289414 /* ConnectionObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionObserver.swift; sourceTree = "<group>"; };
+		070E28012A5CA18800289414 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		0729EEC32A56971B00F59C56 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0729EEC62A56971B00F59C56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0729EEC82A56971B00F59C56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				070E27DC2A5AB9CD00289414 /* Localizable.swift */,
+				070E28012A5CA18800289414 /* Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				070E27F02A5BD06000289414 /* RealmManager.swift in Sources */,
 				070E27F52A5BDF1000289414 /* BooksPopUpViewController.swift in Sources */,
 				0729EEEA2A56A48D00F59C56 /* CategoryScreenViewController.swift in Sources */,
+				070E28022A5CA18800289414 /* Extension.swift in Sources */,
 				070E27E52A5ABCF300289414 /* BooksScreenViewModel.swift in Sources */,
 				070E27E92A5ABDA700289414 /* BooksScreenViewCell.swift in Sources */,
 				0729EEC72A56971B00F59C56 /* AppDelegate.swift in Sources */,
@@ -466,24 +470,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 47Y4JHVTS9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dfsdfsd.TestTask;
+				PRODUCT_BUNDLE_IDENTIFIER = bloodTrail.TestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -494,24 +501,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 47Y4JHVTS9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dfsdfsd.TestTask;
+				PRODUCT_BUNDLE_IDENTIFIER = bloodTrail.TestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

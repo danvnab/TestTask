@@ -9,7 +9,7 @@ import Foundation
 import SnapKit
 import UIKit
 
-class BooksPopUpView: BaseView {
+final class BooksPopUpView: BaseView {
     
     lazy var titleLabel: UILabel = {
        var label = UILabel()

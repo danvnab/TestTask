@@ -9,7 +9,7 @@ import Foundation
 import SnapKit
 import UIKit
 
-class BooksPopUpViewCell: UITableViewCell {
+final class BooksPopUpViewCell: UITableViewCell {
     
     lazy var shopImage: UIImageView = {
        var image = UIImageView()
@@ -47,7 +47,6 @@ class BooksPopUpViewCell: UITableViewCell {
         shopImage.snp.remakeConstraints { make in
             make.leading.equalToSuperview().offset(20)
             make.top.equalToSuperview().offset(15)
-//            make.height.width.equalTo(100)
             make.width.equalTo(shopImage.snp.height)
             make.bottom.equalToSuperview().offset(-15)
         }

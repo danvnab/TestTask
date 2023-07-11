@@ -9,7 +9,7 @@ import Foundation
 import SnapKit
 import UIKit
 
-class BooksScreenView: BaseView {
+final class BooksScreenView: BaseView {
     
     lazy var tableView: UITableView = {
        var tableView = UITableView()

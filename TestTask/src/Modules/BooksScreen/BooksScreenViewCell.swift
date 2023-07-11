@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class BooksScreenViewCell: UITableViewCell {
+final class BooksScreenViewCell: UITableViewCell {
     
     lazy var bookImage: UIImageView = {
        var image = UIImageView()

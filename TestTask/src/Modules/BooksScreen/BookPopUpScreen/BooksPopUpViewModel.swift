@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BooksPopUpViewModel {
+final class BooksPopUpViewModel {
     
     var model: [BuyLink] = []
 }

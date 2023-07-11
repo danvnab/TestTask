@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BooksScreenViewModel {
+final class BooksScreenViewModel {
     
     let networkManager: NetworkManager = .shared
     let realmManager: RealmManager = .shared

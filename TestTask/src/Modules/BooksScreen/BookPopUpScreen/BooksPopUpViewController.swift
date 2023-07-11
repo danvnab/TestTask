@@ -12,7 +12,7 @@ protocol BooksPopUpViewControllerDelegate: AnyObject {
     func showShop(url: String)
 }
 
-class BooksPopUpViewController: UIViewController {
+final class BooksPopUpViewController: UIViewController {
     
     lazy var mainView: BooksPopUpView = {
        var view = BooksPopUpView()

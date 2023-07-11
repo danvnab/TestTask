@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController {
+final class WebViewController: UIViewController {
 
     lazy var webView: WKWebView = {
        var webView = WKWebView()
@@ -30,7 +30,6 @@ class WebViewController: UIViewController {
 
     func loadRequest(urlString: String) {
         guard let url = URL(string: urlString) else {
-            // Не удалось создать URL, обработайте ошибку
             return
         }
         shopUrl = url

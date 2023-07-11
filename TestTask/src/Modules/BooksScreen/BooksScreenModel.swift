@@ -142,7 +142,7 @@ class RealmBooksList: Object {
         self.nextPublishedDate = model.nextPublishedDate
         self.previousPublishedDate = model.previousPublishedDate
         self.displayName = model.displayName
-        var booksArray = List<RealmBook>()
+        let booksArray = List<RealmBook>()
         model.books.forEach( { booksArray.append(RealmBook(model: $0)) } )
         self.books = booksArray
     }
@@ -171,7 +171,7 @@ class RealmBook: Object {
         self.title = model.title
         self.author = model.author
         self.contributorNote = model.contributorNote
-        var links = List<RealmBuyLink>()
+        let links = List<RealmBuyLink>()
         model.buyLinks.forEach( { links.append(RealmBuyLink(model: $0)) } )
         self.buyLinks = links
     }

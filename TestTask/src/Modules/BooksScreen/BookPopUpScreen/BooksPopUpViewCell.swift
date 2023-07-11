@@ -48,7 +48,7 @@ class BooksPopUpViewCell: UITableViewCell {
             make.leading.equalToSuperview().offset(20)
             make.top.equalToSuperview().offset(15)
 //            make.height.width.equalTo(100)
-            make.width.equalTo(shopImage.snp_height)
+            make.width.equalTo(shopImage.snp.height)
             make.bottom.equalToSuperview().offset(-15)
         }
         titleLabel.snp.remakeConstraints { make in

@@ -42,7 +42,7 @@ class RealmCategoryMain: Object {
     
     init(model: CategoryMainModel) {
         super.init()
-        var resultArray = List<RealmCategoryList>()
+        let resultArray = List<RealmCategoryList>()
         model.results.forEach( { resultArray.append(RealmCategoryList(model: $0)) } )
         self.results = resultArray
     }
